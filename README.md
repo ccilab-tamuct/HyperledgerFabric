@@ -64,16 +64,23 @@ cd fabric-samples/test-network
 ```
 docker ps -a
 ```
-18. Once the channel has been created, deploy a sample JavaScript chaincode to the network. Dependencies must be installed first.
+18. Update and upgrade. Install JQ
+```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install jq
+```
+19. Once the channel has been created, deploy a sample JavaScript chaincode to the network. Dependencies must be installed first.
 ```
 cd ../asset-transfer-basic/chaincode-javascript
 sudo apt-get install npm
 npm install
+cd ../../test-network
 ```
+20. Deploy the chaincode using the network.sh script
 ```
 ./network.sh deployCC -ccn basic -ccp .../asset-transfer-basic/chaincode-javascript -ccl javascript
 ```
-19. After deploying the chaincode, use the "peer" CLI to interact with the network by adding the "peer" binary to the CLI path.
+21. After deploying the chaincode, use the "peer" CLI to interact with the network by adding the "peer" binary to the CLI path.
 ```
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
