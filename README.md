@@ -58,6 +58,7 @@ curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/ins
 * Open a terminal and navigate to the test-network folder
 ```
 cd fabric-samples/test-network
+sudo systemctl start docker
 ```
 * Use the network.sh script to bring up the network.
 ```
