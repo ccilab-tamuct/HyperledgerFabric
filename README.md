@@ -26,3 +26,17 @@ cd HLF
 ```
 sudo apt-get install git curl docker-compose -y
 ```
+7. Start the docker daemon
+```
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+8. Add current user to the docker group
+```
+sudo usermod -a -G docker <username>
+```
+9. Check docker versions
+```
+docker --version
+docker-compose -version
+```
