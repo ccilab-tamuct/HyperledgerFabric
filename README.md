@@ -14,3 +14,15 @@ su - root
 sudo usermod -aG sudo <username>
 su - <username>
 ```
+4. Create a new directory to work with Hyperledger Fabric
+```
+mkdir HLF
+```
+5. Navigate into the HLF directory
+```
+cd HLF
+```
+6. Install git, curl, and docker
+```
+sudo apt-get install git curl docker-compose -y
+```
