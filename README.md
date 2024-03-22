@@ -14,6 +14,10 @@ su - root
 sudo usermod -aG sudo <username>
 su - <username>
 ```
+* Update and upgrade. Install JQ
+```
+sudo apt-get update && sudo apt-get upgrade
+```
 * Create a new directory to work with Hyperledger Fabric
 ```
 mkdir HLF
