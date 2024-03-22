@@ -55,7 +55,7 @@ curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/ins
 * Open the HLF folder. Press CTRL+K and then CTRL+O. Select the HLF folder in the Home directory.
 * Select "Yes, I trust the authors"
 * The fabric-samples directory has a test-network folder that can be used to test smart contracts (chaincode). The test-network brings up two peer organizations and an orderer organization. Each peer organization has one peer each.
-* Navigate to the test-network folder
+* Open a terminal and navigate to the test-network folder
 ```
 cd fabric-samples/test-network
 ```
