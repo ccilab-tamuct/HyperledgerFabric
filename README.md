@@ -63,6 +63,10 @@ Required software:
   ```
   go version
   ```
+* Download and install JQuery (necessary for following the documentation tutorials)
+  ```
+  sudo apt-get install jq
+  ```
 * Download the fabric install script.
   ```
   curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
