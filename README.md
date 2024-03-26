@@ -15,7 +15,7 @@
 * Grant sudo permissions to current user.
   ```
   su - root
-  sudo usermod -aG sudo <username>
+  sudo usermod -a -G sudo <username>
   su - <username>
   ```
 * Create a new droplet. Use en_US.UTF-8.
