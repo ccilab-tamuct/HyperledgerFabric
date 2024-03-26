@@ -77,3 +77,23 @@
   ```
   ./install-fabric.sh docker samples binary
   ```
+The Hyperledger Fabric "fabric-samples" folder should be inside the HLF directory. The fabric-samples folder contains a sample network as well as sample chaincodes and applications.
+
+## Bring up the test network
+* Navigate to the test-network folder.
+  ```
+  cd fabric-samples/test-network
+  ```
+The network.sh file is the main file to run most of the sample files provided.
+* Bring down any previous networks.
+  ```
+  ./network.sh down
+  ```
+* Bring up the network.
+  ```
+  ./network.sh up
+  ```
+* Check the docker containers created.
+  ```
+  docker ps -a
+  ```
