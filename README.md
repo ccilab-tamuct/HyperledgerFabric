@@ -52,6 +52,7 @@ Required software:
   ```
 * Add /usr/local/go/bin to the PATH environment variable.
   ```
+  export GOPATH=/usr/local/go
   export PATH=$PATH:/usr/local/go/bin
   ```
 * Check Go version.
