@@ -130,6 +130,8 @@ Smart contracts need to be packaged and installed on peers before they can be qu
   ```
 * Once the dependencies are installed, navigate back to the test-network directory:
   ```
+  cd ../../test-network
+  ```
 The "peer" CLI can be used to package the chaincode.
 * Add the peer binary to the CLI path.
   ```
@@ -141,5 +143,4 @@ The "peer" CLI can be used to package the chaincode.
   peer version
   ```
 
-  cd ../../test-network
-  ```
+  
