@@ -52,7 +52,7 @@ Required software:
 * Download and install Golang.
   ```
   wget https://dl.google.com/go/go1.22.1.linux-amd64.tar.gz
-  tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+  tar -xzvf go1.22.1.linux-amd64.tar.gz
   ```
 * Add /usr/local/go/bin to the PATH environment variable.
   ```
