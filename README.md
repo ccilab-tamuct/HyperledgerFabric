@@ -63,6 +63,11 @@ Required software:
   ```
   sudo apt-get install jq
   ```
+* Exit and relog in as <username>
+  ```
+  exit
+  su - <username>
+  ```
 * Download the fabric install script.
   ```
   curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
