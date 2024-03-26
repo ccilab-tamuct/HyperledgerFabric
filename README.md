@@ -121,5 +121,5 @@ The fabric-samples provide sample chaincodes written in Go, JavaScript, Java, an
 Smart contracts need to be packaged and installed on peers before they can be queried and invoked.
 * Navigate to the sample JS chaincode.
   ```
-  cd fabric-samples/asset-transfer-basic/chaincode-javascript
+  cd ../asset-transfer-basic/chaincode-javascript
   ```
