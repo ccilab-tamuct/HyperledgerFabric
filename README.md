@@ -26,11 +26,6 @@ Required software:
   ```
   sudo apt-get update && sudo apt-get upgrade
   ```
-  
-* Navigate back to HLF folder.
-  ```
-  cd HLF
-  ```
 * Install git, curl, and docker.
   ```
   sudo apt-get install git curl docker-compose -y
