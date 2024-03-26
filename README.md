@@ -42,7 +42,7 @@ Required software:
   ```
 * Add current user to docker group.
   ```
-  sudo usermod -aG docker <username>
+  sudo usermod -a -G docker <username>
   ```
 * Check docker versions
   ```
@@ -71,6 +71,7 @@ Required software:
   ```
   curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
   ```
+* Restart the terminal and navigate back to HLF directory.
 * Pull docker containers, binaries, and samples from the official repository.
   ```
   ./install-fabric.sh docker samples binary
