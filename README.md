@@ -53,6 +53,7 @@ Required software:
   ```
   wget https://dl.google.com/go/go1.22.1.linux-amd64.tar.gz
   tar -xzvf go1.22.1.linux-amd64.tar.gz
+  sudo mv go/ /usr/local
   ```
 * Add /usr/local/go/bin to the PATH environment variable.
   ```
