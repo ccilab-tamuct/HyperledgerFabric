@@ -80,6 +80,7 @@
 The Hyperledger Fabric "fabric-samples" folder should be inside the HLF directory. The fabric-samples folder contains a sample network as well as sample chaincodes and applications.
 
 ## Bring up the test network
+* Restart the system.
 * Open Visual Studio Code
 * Press CTRL+K, then CTRL+O and open the HLF folder from the Home directory.
 * Select "Yes, I trust the authors" if prompted.
