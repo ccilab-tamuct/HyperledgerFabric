@@ -182,4 +182,8 @@ Since Org2 variables are already set, this guide will approve the chaincode defi
   ```
   export CC_PACKAGE_ID=basic_1.0:<packageID>
   ```
-
+Chaincode approval is organization-wide. Only one peer needs to approve and the approval will be distributed to other peers in the organization.
+* Approve the chaincode on Org2 peer.
+  ```
+  peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+  ```
