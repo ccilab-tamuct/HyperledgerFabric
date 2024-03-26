@@ -52,5 +52,3 @@ Required software:
   ```
   ./install-fabric.sh docker samples binary
   ```
-* 
-
