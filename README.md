@@ -147,7 +147,7 @@ The "peer" CLI can be used to package the chaincode.
   peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-basic/chaincode-javascript --lang node --label basic_1.0
   ```
 Once the chaincode is packaged, it must be installed on each peers on the channel
-* Set the environment Variables for Org1.
+* Set the environment variables for Org1.
   ```
   export CORE_PEER_TLS_ENABLED=true
   export CORE_PEER_LOCALMSPID="Org1MSP"
@@ -170,4 +170,16 @@ Once the chaincode is packaged, it must be installed on each peers on the channe
   ```
   peer lifecycle chaincode install basic.tar.gz
   ```
-  
+After installing the chaincode to each peers in the channel, the chaincode definition must be approved using an endorsement policy. The default policy is the Byzantine Fault Tolerance which approves the chaincode through a majority vote.
+Keep in mind that the environment variables are still set to Org2. To approve the chaincode definition on Org1 peer first, set the environment variables for Org1 as shown previously, excluding the first line.
+Since Org2 variables are already set, this guide will approve the chaincode definition on Org2 peer first.
+* Query the Package ID of the chaincode. This is needed for approval.
+  ```
+  peer lifecycle chaincode queryinstalled
+  ```
+* Copy the Package ID
+* Save the Package ID as an environment variable.
+  ```
+  export CC_PACKAGE_ID=basic_1.0:<packageID>
+  ```
+
