@@ -39,6 +39,10 @@ Required software:
   sudo systemctl start docker
   sudo systemctl enable docker
   ```
+* Add current user to docker group.
+  ```
+  sudo usermod -aG docker <username>
+  ```
 * Check docker versions
   ```
   docker --version
