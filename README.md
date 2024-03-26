@@ -31,10 +31,6 @@ Required software:
   ```
   cd HLF
   ```
-* Update and upgrade apt-get
-  ```
-  sudo apt-get update && sudo apt-get upgrade
-  ```
 * Install git, curl, and docker.
   ```
   sudo apt-get install git curl docker-compose -y
@@ -52,6 +48,19 @@ Required software:
   ```
   docker --version
   docker-compose -version
+  ```
+* Download and install Golang.
+  ```
+  wget https://dl.google.com/go/go1.22.1.linux-amd64.tar.gz
+  tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+  ```
+* Add /usr/local/go/bin to the PATH environment variable.
+  ```
+  export PATH=$PATH:/usr/local/go/bin
+  ```
+* Check Go version.
+  ```
+  go version
   ```
 * Download the fabric install script.
   ```
