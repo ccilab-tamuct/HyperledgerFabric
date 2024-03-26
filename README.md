@@ -12,16 +12,21 @@ Required software:
   ```
   mkdir HLF
   ```
-* Open VS Code.
-* Navigate to the HLF directory by opening the folder in VS Code. Press CTRL+K, then CTRL+O. Select the HLF folder in the Home directory.
-* Select "Yes, I trust the authors."
-* Press CTRL+SHIFT+` to open a new terminal.
 * Grant sudo permissions to current user.
   ```
   su - root
   sudo usermod -aG sudo <username>
   su - <username>
   ```
+* Create a new droplet. Use en_US.UTF-8.
+  ```
+  sudo dpkg-reconfigure locales
+  ```
+* Update and upgrade system.
+  ```
+  sudo apt-get update && sudo apt-get upgrade
+  ```
+  
 * Navigate back to HLF folder.
   ```
   cd HLF
