@@ -80,7 +80,7 @@
 The Hyperledger Fabric "fabric-samples" folder should be inside the HLF directory. The fabric-samples folder contains a sample network as well as sample chaincodes and applications.
 
 ## Bring up the test network
-* Restart the system.
+* Restart the system (for some reason the sudo permissions and docker permissions are lost when using the terminal in VS Code, but restarting seemed to fix the issue).
 * Open Visual Studio Code
 * Press CTRL+K, then CTRL+O and open the HLF folder from the Home directory.
 * Select "Yes, I trust the authors" if prompted.
