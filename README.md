@@ -3,15 +3,16 @@
 This document is a step-by-step guide on installing Hyperledger Fabric. It will be a guide to installing the dependencies and initializing the test-network described in the official documentation.
 
 Required software:
-* Ubuntu (latest version)
-* Visual Studio Code (latest version)
+1. Ubuntu (latest version)
+2. Visual Studio Code (latest version)
 
 
-* Press CTRL+SHIFT+` to open a new terminal.
+* Open the terminal.
 * Create a new directory called "HLF". This will be the main directory to run Hyperledger Fabric chaincode and applications.
   ```
   mkdir HLF
   ```
+* Open VS Code.
 * Navigate to the HLF directory by opening the folder in VS Code. Press CTRL+K, then CTRL+O. Select the HLF folder in the Home directory.
 * Select "Yes, I trust the authors."
 * Press CTRL+SHIFT+` to open a new terminal.
@@ -20,6 +21,10 @@ Required software:
   su - root
   sudo usermod -aG sudo <username>
   su - <username>
+  ```
+* Navigate back to HLF folder.
+  ```
+  cd HLF
   ```
 * Update and upgrade apt-get
   ```
