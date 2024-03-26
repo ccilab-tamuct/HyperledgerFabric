@@ -123,3 +123,12 @@ Smart contracts need to be packaged and installed on peers before they can be qu
   ```
   cd ../asset-transfer-basic/chaincode-javascript
   ```
+* Install npm
+  ```
+  sudo apt-get install npm
+  npm install
+  ```
+* Once the dependencies are installed, navigate back to the test-network directory:
+  ```
+  cd ../../test-network
+  ```
