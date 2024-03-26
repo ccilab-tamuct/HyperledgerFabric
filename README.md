@@ -144,7 +144,7 @@ The "peer" CLI can be used to package the chaincode.
   ```
 * Package the chaincode.
   ```
-  peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-basic/chaincode-javascript lang node --label basic_1.0
+  peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-basic/chaincode-javascript --lang node --label basic_1.0
   ```
 Once the chaincode is packaged, it must be installed on each peers on the channel
 * Set the environment Variables for Org1.
