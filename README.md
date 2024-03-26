@@ -86,7 +86,7 @@ The Hyperledger Fabric "fabric-samples" folder should be inside the HLF director
   ```
   exit
   ```
-## Bring up the test network
+## Bring up the test network.
 * Restart the system (for some reason the sudo permissions and docker permissions are lost when using the terminal in VS Code, but restarting seemed to fix the issue).
 * Open Visual Studio Code
 * Press CTRL+K, then CTRL+O and open the HLF folder from the Home directory.
@@ -108,4 +108,18 @@ The network.sh file is the main file to run most of the sample files provided.
 * Check the docker containers created.
   ```
   docker ps -a
+  ```
+  
+## Deploy sample chaincode to the test network
+Now that the test network is confirmed to work, the next step is to deploy a sample chaincode (smart contract) in the network.
+* Bring down the previous network and bring up a new one.
+  ```
+  ./network.sh down
+  ./network.sh up
+  ```
+The fabric-samples provide sample chaincodes written in Go, JavaScript, Java, and TypeScript. This guide will be using the JavaScript chaincode.
+Smart contracts need to be packaged and installed on peers before they can be queried and invoked.
+* Navigate to the sample JS chaincode.
+  ```
+  cd fabric-samples/asset-transfer-basic/chaincode-javascript
   ```
