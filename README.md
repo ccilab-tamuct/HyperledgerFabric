@@ -1,12 +1,12 @@
 # HyperledgerFabric
 
-This document is a step-by-step guide on installing Hyperledger Fabric. It will be a guide to installing the dependencies and initializing the test-network described in the official documentation.
+## This document is a step-by-step guide on installing Hyperledger Fabric. It will be a guide to installing the dependencies and initializing the test-network described in the official documentation.
 
-Required software:
+## Required software:
 1. Ubuntu (latest version)
 2. Visual Studio Code (latest version)
 
-
+## Install Hyperledger Fabric
 * Open the terminal.
 * Create a new directory called "HLF". This will be the main directory to run Hyperledger Fabric chaincode and applications.
   ```
@@ -63,7 +63,7 @@ Required software:
   ```
   sudo apt-get install jq
   ```
-* Exit and relog in as <username>
+* Exit and relog in
   ```
   exit
   su - <username>
