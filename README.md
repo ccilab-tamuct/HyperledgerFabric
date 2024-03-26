@@ -12,10 +12,7 @@ Required software:
   ```
   mkdir HLF
   ```
-* Navigate to the HLF directory.
-  ```
-  cd HLF
-  ```
+* Navigate to the HLF directory by opening the folder in VS Code
 * Grant sudo permissions to current user.
   ```
   su - root
