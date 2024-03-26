@@ -6,13 +6,15 @@ Required software:
 * Ubuntu (latest version)
 * Visual Studio Code (latest version)
 
-* Open Visual Studio Code
-* Press CTRL+SHIFT+` to open a new terminal
+* Open Visual Studio Code.
+* Press CTRL+SHIFT+` to open a new terminal.
 * Create a new directory called "HLF". This will be the main directory to run Hyperledger Fabric chaincode and applications.
   ```
   mkdir HLF
   ```
 * Navigate to the HLF directory by opening the folder in VS Code. Press CTRL+K, then CTRL+O. Select the HLF folder in the Home directory.
+* Select "Yes, I trust the authors."
+* Press CTRL+SHIFT+` to open a new terminal.
 * Grant sudo permissions to current user.
   ```
   su - root
