@@ -109,13 +109,13 @@ The network.sh file is the main file to run most of the sample files provided.
   ```
   docker ps -a
   ```
-  
+The test network brings up two organizations, Org1 and Org2, each having one peer. The test network also has an Orderer Organization that handles requests and updates to the channel.
 ## Deploy sample chaincode to the test network
 Now that the test network is confirmed to work, the next step is to deploy a sample chaincode (smart contract) in the network.
-* Bring down the previous network and bring up a new one.
+* Bring down the previous network and bring up a new one with Certificate Authorities (CA).
   ```
   ./network.sh down
-  ./network.sh up
+  ./network.sh up createChannel -ca
   ```
 The fabric-samples provide sample chaincodes written in Go, JavaScript, Java, and TypeScript. This guide will be using the JavaScript chaincode.
 Smart contracts need to be packaged and installed on peers before they can be queried and invoked.
@@ -142,5 +142,20 @@ The "peer" CLI can be used to package the chaincode.
   ```
   peer version
   ```
-
-  
+* Package the chaincode.
+  ```
+  peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-basic/chaincode-javascript lang node --label basic_1.0
+  ```
+Once the chaincode is packaged, it must be installed on each peers on the channel
+* Set the environment Variables for Org1.
+  ```
+  export CORE_PEER_TLS_ENABLED=true
+  export CORE_PEER_LOCALMSPID="Org1MSP"
+  export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+  export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+  export CORE_PEER_ADDRESS=localhost:7051
+  ```
+* Install the chaincode on Org1 peer.
+  ```
+  peer lifecycle chaincode install basic.tar.gz
+  ```
