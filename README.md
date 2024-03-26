@@ -130,5 +130,16 @@ Smart contracts need to be packaged and installed on peers before they can be qu
   ```
 * Once the dependencies are installed, navigate back to the test-network directory:
   ```
+The "peer" CLI can be used to package the chaincode.
+* Add the peer binary to the CLI path.
+  ```
+  export PATH=${PWD}/../bin:$PATH
+  export FABRIC_CFG_PATH=$PWD/../config/
+  ```
+* Test if the peer CLI is working.
+  ```
+  peer version
+  ```
+
   cd ../../test-network
   ```
