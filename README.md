@@ -155,7 +155,19 @@ Once the chaincode is packaged, it must be installed on each peers on the channe
   export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
   export CORE_PEER_ADDRESS=localhost:7051
   ```
-* Install the chaincode on Org1 peer.
+* Install the chaincode on Org1 peer (it may take a minute or so to complete).
   ```
   peer lifecycle chaincode install basic.tar.gz
   ```
+* Set the environment Variables for Org2.
+  ```
+  export CORE_PEER_LOCALMSPID="Org2MSP"
+  export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+  export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+  export CORE_PEER_ADDRESS=localhost:9051
+  ```
+* Install the chaincode on Org2 peer.
+  ```
+  peer lifecycle chaincode install basic.tar.gz
+  ```
+  
