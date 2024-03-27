@@ -210,4 +210,13 @@ Chaincode approval is organization-wide. Only one peer needs to approve and the 
   ```
   peer lifecycle chaincode querycommitted --channelID mychannel --name basic
   ```
-* 
+* After the chaincode is committed, it can be invoked. It is usually the client applications that invoke the chaincode, but for testing purposes, the peer CLI can be used. 
+  ```
+  peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"InitLedger","Args":[]}'
+  ```
+* Query the assets that are initialized from the previous command.
+  ```
+  peer chaincode query -C mychannel -n basic -c '{"Args":["GetAllAssets"]}'
+  ```
+The chaincode file is located in the asset-transfer-basic folder->chaincode-javascript-lib->assetTransfer.js
+The js file contain several functions that can be invoked.
