@@ -232,4 +232,4 @@ The js file contain several functions that can be invoked.
   ```
   ./network.sh down
   ```
-There are a lot of commands that are needed to commit and invoke chaincodes to the network so a shell script can be used to automate the process.
+There are a lot of commands that are needed to commit and invoke chaincodes to the network so a shell script can be used to automate the process. The next step is to 
